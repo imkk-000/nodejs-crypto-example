@@ -1,6 +1,8 @@
-const SECRET_KEY = 'this is my secret key.'
+const config = {
+  'secret_key': 'this is my secret key.',
+}
 const crypto = require('crypto')
-const hmacSHA256 = crypto.createHmac('sha256', SECRET_KEY)
+const hmacSHA256 = crypto.createHmac('sha256', config.secret_key)
 
 hmacSHA256.write('hash data')
 hmacSHA256.end()
